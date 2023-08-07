@@ -1,10 +1,8 @@
-const express = require('express');
+const express = require("express");
+const routerUser = require("./user.router.js");
 const router = express.Router();
 
-
-router.get('/', (req, res) => {
-    res.send("Welcome to express");
-});
-
+// colocar las rutas aquí
+router.use("/users", routerUser);
 
 module.exports = router;
